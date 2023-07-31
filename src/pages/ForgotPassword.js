@@ -129,7 +129,7 @@ export const action = async ({ request }) => {
   const formData = await request.formData();
 
   const response = await fetch(
-    "http://localhost:8000/instamern/users/forgot-password",
+    "https://instamern-3cda0fa07039.herokuapp.com/instamern/users/forgot-password",
     {
       method: "POST",
       headers: {

@@ -1,6 +1,6 @@
 const searchUsers = async (username) => {
   const response = await fetch(
-    `http://localhost:8000/instamern/users/search/${username}`,
+    `https://instamern-3cda0fa07039.herokuapp.com/instamern/users/search/${username}`,
     {
       headers: {
         "Content-Type": "application/json",

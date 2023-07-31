@@ -1,7 +1,7 @@
 import Cookies from "js-cookie";
 
 const updateMe = async ({ firstname, lastname, username, bio }) => {
-  const response = await fetch("http://localhost:8000/instamern/users/update", {
+  const response = await fetch("https://instamern-3cda0fa07039.herokuapp.com/instamern/users/update", {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",

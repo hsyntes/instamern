@@ -159,7 +159,7 @@ export const action = async ({ request }) => {
   const formData = await request.formData();
 
   const response = await fetch(
-    `http://localhost:8000/instamern/users/change-email`,
+    `https://instamern-3cda0fa07039.herokuapp.com/instamern/users/change-email`,
     {
       method: "PATCH",
       headers: {

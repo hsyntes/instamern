@@ -3,7 +3,7 @@ import Cookies from "js-cookie";
 const logout = async () => {
   try {
     const response = await fetch(
-      "http://localhost:8000/instamern/users/logout",
+      "https://instamern-3cda0fa07039.herokuapp.com/instamern/users/logout",
       {
         method: "POST",
         headers: {

@@ -54,7 +54,7 @@ export const action = async ({ request }) => {
 
   if (mode === "login") {
     const response = await fetch(
-      "http://localhost:8000/instamern/users/login",
+      "https://instamern-3cda0fa07039.herokuapp.com/instamern/users/login",
       {
         method: "POST",
         headers: {
@@ -75,7 +75,7 @@ export const action = async ({ request }) => {
 
   if (mode === "signup") {
     const response = await fetch(
-      "http://localhost:8000/instamern/users/signup",
+      "https://instamern-3cda0fa07039.herokuapp.com/instamern/users/signup",
       {
         method: "POST",
         headers: {
@@ -96,7 +96,7 @@ export const action = async ({ request }) => {
 
     if (data.status === "success") {
       const loginResponse = await fetch(
-        "http://localhost:8000/instamern/users/login",
+        "https://instamern-3cda0fa07039.herokuapp.com/instamern/users/login",
         {
           method: "POST",
           headers: {

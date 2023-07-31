@@ -1,5 +1,5 @@
 const getUsers = async () => {
-  const response = await fetch("http://localhost:8000/instamern/users/");
+  const response = await fetch("https://instamern-3cda0fa07039.herokuapp.com/instamern/users/");
 
   const { data } = await response.json();
 

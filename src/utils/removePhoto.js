@@ -1,7 +1,7 @@
 import Cookies from "js-cookie";
 
 const removePhoto = async () => {
-  const response = await fetch("http://localhost:8000/instamern/users/remove", {
+  const response = await fetch("https://instamern-3cda0fa07039.herokuapp.com/instamern/users/remove", {
     method: "POST",
     headers: {
       //   "Content-Type": "application/json",

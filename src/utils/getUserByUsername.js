@@ -1,6 +1,6 @@
 const getUserByUsername = async (username) => {
   const response = await fetch(
-    `http://localhost:8000/instamern/users/username/${username}`
+    `https://instamern-3cda0fa07039.herokuapp.com/instamern/users/username/${username}`
   );
 
   const { data } = await response.json();

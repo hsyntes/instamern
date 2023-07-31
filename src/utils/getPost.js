@@ -2,7 +2,7 @@ const getPost = async (postId) => {
   if (!postId) return null;
 
   const response = await fetch(
-    `http://localhost:8000/instamern/posts/${postId}`
+    `https://instamern-3cda0fa07039.herokuapp.com/instamern/posts/${postId}`
   );
 
   const { data } = await response.json();

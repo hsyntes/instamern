@@ -2,7 +2,7 @@ import Cookies from "js-cookie";
 
 const follow = async ({ type, username }) => {
   const response = await fetch(
-    `http://localhost:8000/instamern/users/${type}/${username}`,
+    `https://instamern-3cda0fa07039.herokuapp.com/instamern/users/${type}/${username}`,
     {
       method: "POST",
       headers: {

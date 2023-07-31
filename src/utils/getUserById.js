@@ -1,6 +1,6 @@
 const getUserById = async (id) => {
   const response = await fetch(
-    `http://localhost:8000/instamern/users/id/${id}`
+    `https://instamern-3cda0fa07039.herokuapp.com/instamern/users/id/${id}`
   );
 
   const { data } = await response.json();

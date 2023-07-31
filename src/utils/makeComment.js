@@ -2,7 +2,7 @@ import Cookies from "js-cookie";
 
 const makeComment = async ({ postId, comment }) => {
   const response = await fetch(
-    `http://localhost:8000/instamern/posts/comments/${postId}`,
+    `https://instamern-3cda0fa07039.herokuapp.com/instamern/posts/comments/${postId}`,
     {
       method: "POST",
       headers: {

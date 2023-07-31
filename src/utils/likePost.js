@@ -2,7 +2,7 @@ import Cookies from "js-cookie";
 
 const likePost = async ({ postId }) => {
   const response = await fetch(
-    `http://localhost:8000/instamern/posts/like/${postId}`,
+    `https://instamern-3cda0fa07039.herokuapp.com/instamern/posts/like/${postId}`,
     {
       method: "POST",
       headers: {

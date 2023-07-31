@@ -1,7 +1,7 @@
 import Cookies from "js-cookie";
 
 const getStories = async () => {
-  const response = await fetch("http://localhost:8000/instamern/stories/", {
+  const response = await fetch("https://instamern-3cda0fa07039.herokuapp.com/instamern/stories/", {
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${Cookies.get("jsonwebtoken")}`,

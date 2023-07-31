@@ -2,7 +2,7 @@ import Cookies from "js-cookie";
 
 const uploadStory = async ({ story }) => {
   const response = await fetch(
-    "http://localhost:8000/instamern/stories/upload",
+    "https://instamern-3cda0fa07039.herokuapp.com/instamern/stories/upload",
     {
       method: "POST",
       headers: {

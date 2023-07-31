@@ -3,8 +3,9 @@ import Cookies from "js-cookie";
 const getCurrentUser = async () => {
   if (!Cookies.get("jsonwebtoken")) return null;
 
+  try {
     const response = await fetch(
-      "http://localhost:8000/instamern/users/authorization/current-user",
+      "https://instamern-3cda0fa07039.herokuapp.com/instamern/users/authorization/current-user",
       {
         method: "GET",
         headers: {
@@ -20,6 +21,10 @@ const getCurrentUser = async () => {
     const { data } = await response.json();
 
     return data.user;
+  } catch(e) {
+    console.error(e);
+    return null;
+  }
 };
 
 export default getCurrentUser;
