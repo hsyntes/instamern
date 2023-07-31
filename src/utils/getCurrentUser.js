@@ -12,7 +12,7 @@ const getCurrentUser = async () => {
           "Content-Type": "application/json",
           Authorization: `Bearer ${Cookies.get("jsonwebtoken")}`,
         },
-        credentials: "include",
+        // credentials: "include",
       }
     );
 
