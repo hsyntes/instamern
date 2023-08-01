@@ -100,8 +100,6 @@ const EditProfile = ({ show, handleEditProfile }) => {
         handleEditProfile();
 
         navigate("/");
-
-        // window.location.reload();
       }
     },
   });
