@@ -6,6 +6,8 @@ The InstaMERN frontend is built using React, React-Query, Redux, React-Router, a
 
 [InstaMERN](https://instamern.netlify.app)
 
+<br />
+
 ## Technologies Used
 
 React: A JavaScript library for building user interfaces, providing a component-based architecture and efficient rendering.
@@ -23,6 +25,8 @@ Tailwind CSS: A utility-first CSS framework, providing a set of pre-defined clas
 ![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/desktop-dark.png)
 
 ![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/desktop-light.png)
+
+<br />
 
 ## React-Query Integration
 
@@ -44,9 +48,13 @@ Tailwind CSS classes are used to style the components, providing a consistent an
 
 ![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/mobile-dark.png)&emsp;![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/mobile-light.png)
 
+<br />
+
 ## Powerful & Fast MongoDB Atlas Search Engine
 
 ![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/search-mobile-dark.png)&emsp;![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/search-mobile-light.png)
+
+<br />
 
 ## Authentication
 
@@ -54,11 +62,15 @@ User authentication is managed using JWT tokens obtained from the backend upon s
 
 ![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/signup-mobile-dark.png)&emsp;![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/signup-mobile-light.png)
 
+<br />
+
 ### Uploading & Loading Images via AWS Cloud
 
 ![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/upload-post-desktop-dark.png)
 
 ![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/upload-story-mobile-dark.png)&emsp;![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/upload-story-mobile-light.png)
+
+<br />
 
 ## Notifications via MongoDB
 
