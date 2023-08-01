@@ -24,12 +24,16 @@ const AddStory = () => {
                 {currentUser?.photo ? (
                   <img
                     src={currentUser.photo}
-                    className="w-14 rounded-full hover:opacity-50 cursor-pointer transition"
+                    className="w-16 rounded-full hover:opacity-50 cursor-pointer transition"
                     alt="User"
                     onClick={handleUploadStory}
                   />
                 ) : (
-                  <EmptyPhoto username={currentUser?.username} size='52px' onClick={handleUploadStory} />
+                  <EmptyPhoto
+                    username={currentUser?.username}
+                    size="52px"
+                    onClick={handleUploadStory}
+                  />
                 )}
                 <FontAwesomeIcon
                   icon={faPlusCircle}
