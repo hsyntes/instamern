@@ -244,60 +244,64 @@ const EditProfile = ({ show, handleEditProfile }) => {
                   )
                 )}
               </center>
-              <Modal.Body>
-                <div className="form-group relative mb-8">
-                  <Input
-                    type="text"
-                    name="firstname"
-                    placeholder="Firstname"
-                    value={firstname || currentUser.firstname}
-                    onChange={firstnameOnChange}
-                    className="!bg-dark"
-                  />
-                </div>
-                <div className="form-group relative mb-8">
-                  <Input
-                    type="text"
-                    name="lastname"
-                    placeholder="Lastname"
-                    value={lastname || currentUser.lastname}
-                    onChange={lastnameOnChange}
-                    className="!bg-dark"
-                  />
-                </div>
-                <div className="form-group relative mb-8">
-                  <Input
-                    type="text"
-                    name="username"
-                    placeholder="@username"
-                    value={username || currentUser.username}
-                    onChange={handleUsernameOnChange}
-                    className="!bg-dark"
-                  />
-                </div>
-                <div className="form-group relative mb-8">
-                  <Input
-                    type="text"
-                    name="bio"
-                    placeholder="Bio"
-                    value={bio || currentUser.bio}
-                    onChange={handleBioOnChange}
-                    className="!bg-dark"
-                  />
-                </div>
-              </Modal.Body>
-              <Modal.Footer className="flex items-center justify-end">
-                <Button type="submit" variant="primary">
-                  {mutationUpdate.isLoading ? (
-                    <div className="flex items-center">
-                      <Spinner size="sm" />
-                      <span className="ms-3">Saving</span>
+              {!previewPhoto && !selectedPhoto && (
+                <>
+                  <Modal.Body>
+                    <div className="form-group relative mb-8">
+                      <Input
+                        type="text"
+                        name="firstname"
+                        placeholder="Firstname"
+                        value={firstname || currentUser.firstname}
+                        onChange={firstnameOnChange}
+                        className="!bg-dark"
+                      />
                     </div>
-                  ) : (
-                    <span>Save</span>
-                  )}
-                </Button>
-              </Modal.Footer>
+                    <div className="form-group relative mb-8">
+                      <Input
+                        type="text"
+                        name="lastname"
+                        placeholder="Lastname"
+                        value={lastname || currentUser.lastname}
+                        onChange={lastnameOnChange}
+                        className="!bg-dark"
+                      />
+                    </div>
+                    <div className="form-group relative mb-8">
+                      <Input
+                        type="text"
+                        name="username"
+                        placeholder="@username"
+                        value={username || currentUser.username}
+                        onChange={handleUsernameOnChange}
+                        className="!bg-dark"
+                      />
+                    </div>
+                    <div className="form-group relative mb-8">
+                      <Input
+                        type="text"
+                        name="bio"
+                        placeholder="Bio"
+                        value={bio || currentUser.bio}
+                        onChange={handleBioOnChange}
+                        className="!bg-dark"
+                      />
+                    </div>
+                  </Modal.Body>
+                  <Modal.Footer className="flex items-center justify-end">
+                    <Button type="submit" variant="primary">
+                      {mutationUpdate.isLoading ? (
+                        <div className="flex items-center">
+                          <Spinner size="sm" />
+                          <span className="ms-3">Saving</span>
+                        </div>
+                      ) : (
+                        <span>Save</span>
+                      )}
+                    </Button>
+                  </Modal.Footer>
+                </>
+              )}
             </>
           )}
         </form>
