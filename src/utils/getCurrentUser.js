@@ -11,7 +11,9 @@ const getCurrentUser = async () => {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${Cookies.get("jsonwebtoken")}`,
+          Authorization: `Bearer ${
+            Cookies.get("jsonwebtoken") || localStorage.getItem("jsonwebtoken")
+          }`,
         },
         credentials: "include",
       }

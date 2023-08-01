@@ -28,6 +28,8 @@ const AuthenticationPage = () => {
       queryClient.refetchQueries("getUsers");
       queryClient.refetchQueries("getCurrentUser");
 
+      localStorage.setItem("jsonwebtoken", actionData.token);
+
       navigate("/");
     }
   }, [actionData, queryClient, navigate]);
