@@ -1,7 +1,8 @@
 import Cookies from "js-cookie";
 
 const getCurrentUser = async () => {
-  if (!Cookies.get("jsonwebtoken")) return null;
+  if (!Cookies.get("jsonwebtoken") || !localStorage.getItem("jsonwebtoken"))
+    return null;
 
   try {
     const response = await fetch(
