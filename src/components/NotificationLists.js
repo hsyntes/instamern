@@ -7,9 +7,8 @@ const NotificationLists = ({ item }) => {
     getUserById(item.notifiedBy)
   );
 
-
   return (
-    <li className="flex items-start bg-light dark:bg-dark rounded p-4 my-3">
+    <li className="flex items-start bg-light dark:bg-dark rounded p-4 my-3 last:mb-8">
       {userBy?.photo ? (
         <img
           src={userBy.photo}
