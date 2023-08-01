@@ -1,10 +1,8 @@
 # InstaMERN
 
-![logo](https://github.com/hsyntes/instamern/blob/main/public/logo.png)
-
 The InstaMERN frontend is built using React, React-Query, Redux, React-Router, and Tailwind CSS. It provides a user-friendly interface for users to interact with the InstaMERN social media platform.
 
-[InstaMERN](https://instamern.netlify.app)
+[![InstaMERN](https://github.com/hsyntes/instamern/blob/main/public/logo.png)](https://instamern.netlify.app)
 
 <br />
 
