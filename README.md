@@ -46,4 +46,10 @@ Tailwind CSS classes are used to style the components, providing a consistent an
 
 ## Powerful & Fast MongoDB Atlas Search Engine
 
-![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/search-mobile-dark.png)&emsp;![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/mobile-light.png)
+![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/search-mobile-dark.png)&emsp;![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/search-mobile-light.png)
+
+## Authentication
+
+User authentication is managed using JWT tokens obtained from the backend upon successful login. The JWT token is stored in the **Secure Response Headers** and included in the Authorization header for protected API requests also hashing passwords and save them to **MongoDB**
+
+![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/signup-mobile-dark.png)&emsp;![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/signup-mobile-light.png)
