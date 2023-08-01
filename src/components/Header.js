@@ -23,6 +23,7 @@ const Header = () => {
   const mutationLogout = useMutation(logout, {
     onSuccess: () => {
       Cookies.remove("jsonwebtoken");
+      localStorage.clear();
 
       setSettings(false);
 
