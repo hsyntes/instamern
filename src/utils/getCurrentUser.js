@@ -1,7 +1,6 @@
 import Cookies from "js-cookie";
 
 const getCurrentUser = async () => {
-  console.log(Cookies.get("jsonwebtoken"));
   if (!Cookies.get("jsonwebtoken")) return null;
 
   try {
