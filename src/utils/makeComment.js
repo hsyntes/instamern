@@ -7,7 +7,9 @@ const makeComment = async ({ postId, comment }) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${Cookies.get("jsonwebtoken")}`,
+        Authorization: `Bearer ${
+          Cookies.get("jsonwebtoken") || localStorage.getItem("jsonwebtoken")
+        }`,
       },
       body: JSON.stringify({
         comment,

@@ -6,7 +6,9 @@ const uploadStory = async ({ story }) => {
     {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${Cookies.get("jsonwebtoken")}`,
+        Authorization: `Bearer ${
+          Cookies.get("jsonwebtoken") || localStorage.getItem("jsonwebtoken")
+        }`,
       },
       body: story,
     }

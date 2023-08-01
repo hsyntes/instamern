@@ -7,7 +7,9 @@ const follow = async ({ type, username }) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${Cookies.get("jsonwebtoken")}`,
+        Authorization: `Bearer ${
+          Cookies.get("jsonwebtoken") || localStorage.getItem("jsonwebtoken")
+        }`,
       },
     }
   );
