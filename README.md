@@ -4,8 +4,6 @@ The InstaMERN frontend is built using React, React-Query, Redux, React-Router, a
 
 [![InstaMERN](https://github.com/hsyntes/instamern/blob/main/public/logo.png)](https://instamern.netlify.app)
 
-<br />
-
 ## Technologies Used
 
 React: A JavaScript library for building user interfaces, providing a component-based architecture and efficient rendering.
