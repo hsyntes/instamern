@@ -59,3 +59,7 @@ User authentication is managed using JWT tokens obtained from the backend upon s
 ![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/upload-post-desktop-dark.png)
 
 ![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/upload-story-mobile-dark.png)&emsp;![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/upload-story-mobile-light.png)
+
+## Notifications via MongoDB
+
+![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/notifications-mobile-dark.png)&emsp;![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/notifications-mobile-light.png)
