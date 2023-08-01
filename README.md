@@ -36,4 +36,4 @@ React-Router is used for client-side routing, allowing smooth navigation between
 
 Tailwind CSS classes are used to style the components, providing a consistent and responsive design throughout the application.
 
-![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/mobile-dark.png) ![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/mobile-light.png)
+![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/mobile-dark.png)&emsp;![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/mobile-light.png)
