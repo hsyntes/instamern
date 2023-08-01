@@ -12,17 +12,15 @@ const getCurrentUser = async () => {
           "Content-Type": "application/json",
           Authorization: `Bearer ${Cookies.get("jsonwebtoken")}`,
         },
-        // credentials: "include",
       }
     );
 
-    
     if (!response.ok) return null;
 
     const { data } = await response.json();
 
     return data.user;
-  } catch(e) {
+  } catch (e) {
     console.error(e);
     return null;
   }
