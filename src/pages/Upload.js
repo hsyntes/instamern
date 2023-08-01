@@ -160,7 +160,7 @@ const UploadPage = () => {
       <Button
         type="button"
         variant="primary"
-        className="text-primary w-full py-3 my-t mb-12 block lg:hidden"
+        className="text-primary w-full py-3 mt-3 mb-12 block lg:hidden"
         onClick={handleUpload}
         disabled={!selectedPhoto || mutationUpload.isLoading}
       >
