@@ -53,3 +53,9 @@ Tailwind CSS classes are used to style the components, providing a consistent an
 User authentication is managed using JWT tokens obtained from the backend upon successful login. The JWT token is stored in the **Secure Response Headers** and included in the Authorization header for protected API requests also hashing passwords and save them to **MongoDB**
 
 ![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/signup-mobile-dark.png)&emsp;![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/signup-mobile-light.png)
+
+### Uploading & Loading Images via AWS Cloud
+
+![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/upload-post-desktop-dark.png)
+
+![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/upload-story-mobile-dark.png)&emsp;![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/upload-story-mobile-light.png)
