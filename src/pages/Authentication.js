@@ -97,26 +97,6 @@ export const action = async ({ request }) => {
 
     localStorage.setItem("jsonwebtoken", data.token);
 
-    // if (data.status === "success") {
-    //   const loginResponse = await fetch(
-    //     "https://instamern-3cda0fa07039.herokuapp.com/instamern/users/login",
-    //     {
-    //       method: "POST",
-    //       headers: {
-    //         "Content-Type": "application/json",
-    //       },
-    //       body: JSON.stringify({
-    //         username: formData.get("username"),
-    //         password: formData.get("password"),
-    //       }),
-    //     }
-    //   );
-
-    //   const loginData = await loginResponse.json();
-
-    //   return loginData;
-    // }
-
     return data;
   }
 };
