@@ -64,7 +64,6 @@ export const action = async ({ request }) => {
           username: formData.get("username"),
           password: formData.get("password"),
         }),
-        credentials: "include",
       }
     );
 
@@ -89,7 +88,6 @@ export const action = async ({ request }) => {
           password: formData.get("password"),
           passwordConfirm: formData.get("password-confirm"),
         }),
-        credentials: "include",
       }
     );
 
@@ -107,7 +105,6 @@ export const action = async ({ request }) => {
             username: formData.get("username"),
             password: formData.get("password"),
           }),
-          credentials: "include",
         }
       );
 
