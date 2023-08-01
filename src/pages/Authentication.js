@@ -28,8 +28,6 @@ const AuthenticationPage = () => {
       queryClient.refetchQueries("getUsers");
       queryClient.refetchQueries("getCurrentUser");
 
-      localStorage.setItem("jsonwebtoken", actionData.token);
-
       navigate("/");
     }
   }, [actionData, queryClient, navigate]);
@@ -71,6 +69,8 @@ export const action = async ({ request }) => {
 
     const data = await response.json();
 
+    localStorage.setItem("jsonwebtoken", data.token);
+
     return data;
   }
 
@@ -95,25 +95,27 @@ export const action = async ({ request }) => {
 
     const data = await response.json();
 
-    if (data.status === "success") {
-      const loginResponse = await fetch(
-        "https://instamern-3cda0fa07039.herokuapp.com/instamern/users/login",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            username: formData.get("username"),
-            password: formData.get("password"),
-          }),
-        }
-      );
+    localStorage.setItem("jsonwebtoken", data.token);
 
-      const loginData = await loginResponse.json();
+    // if (data.status === "success") {
+    //   const loginResponse = await fetch(
+    //     "https://instamern-3cda0fa07039.herokuapp.com/instamern/users/login",
+    //     {
+    //       method: "POST",
+    //       headers: {
+    //         "Content-Type": "application/json",
+    //       },
+    //       body: JSON.stringify({
+    //         username: formData.get("username"),
+    //         password: formData.get("password"),
+    //       }),
+    //     }
+    //   );
 
-      return loginData;
-    }
+    //   const loginData = await loginResponse.json();
+
+    //   return loginData;
+    // }
 
     return data;
   }
