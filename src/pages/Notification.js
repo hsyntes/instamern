@@ -7,11 +7,10 @@ const NotificationPage = () => {
   const userState = useSelector((state) => state.currentUser);
   const { currentUser } = userState;
 
-
   return (
     <Container>
       <h6 className="font-semibold text-2xl">Notifications</h6>
-      <section className="my-3">
+      <section className="mt-3 mb-8">
         <ul className="rounded lg:w-3/4">
           <li className="flex items-start bg-light dark:bg-dark rounded p-4">
             <img src={logo} width={36} alt="App" />
