@@ -64,6 +64,7 @@ export const action = async ({ request }) => {
           username: formData.get("username"),
           password: formData.get("password"),
         }),
+        credentials: true,
       }
     );
 
