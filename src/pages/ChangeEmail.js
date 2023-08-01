@@ -164,7 +164,9 @@ export const action = async ({ request }) => {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${Cookies.get("jsonwebtoken")}`,
+        Authorization: `Bearer ${
+          Cookies.get("jsonwebtoken") || localStorage.getItem("jsonwebtoken")
+        }`,
       },
       body: JSON.stringify({
         currentPassword: formData.get("current-password"),
