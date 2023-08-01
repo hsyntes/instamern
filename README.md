@@ -15,3 +15,5 @@ Redux: A state management library, enabling centralized data storage and easy st
 React-Router: A routing library for React applications, enabling navigation and URL handling.
 
 Tailwind CSS: A utility-first CSS framework, providing a set of pre-defined classes for styling components.
+
+![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/desktop-dark.png)
