@@ -8,9 +8,9 @@ The InstaMERN frontend is built using React, React-Query, Redux, React-Router, a
 
 ### InstaMERN Backend API
 
-The InstaMERN Backend API serves as the core of the InstaMERN platform, providing user authentication, data management, and more. Explore the API documentation for detailed information on endpoints, usage, and integration.
+The InstaMERN Backend API serves as the core of the InstaMERN platform, providing user authentication, data management, **AWS Cloud** and more. Explore the API documentation for detailed information on endpoints, usage, and integration.
 
-- Repository: [instamern-api](https://github.com/hsyntes/instamern-api)
+- [instamern-api](https://github.com/hsyntes/instamern-api)
 
 ## Technologies Used
 
