@@ -30,6 +30,8 @@ const Header = () => {
       queryClient.invalidateQueries("logout");
       queryClient.refetchQueries("getCurrentUser");
 
+      window.location.reload();
+
       navigate("/");
     },
   });
