@@ -2,7 +2,7 @@
 
 The InstaMERN frontend is built using React, React-Query, Redux, React-Router, and Tailwind CSS. It provides a user-friendly interface for users to interact with the InstaMERN social media platform.
 
-[![InstaMERN](https://github.com/hsyntes/instamern/blob/main/public/logo.png)](https://instamern.netlify.app)
+[![InstaMERN](/public/logo.png)](https://instamern.netlify.app)
 
 ## Technologies Used
 
@@ -18,9 +18,9 @@ Tailwind CSS: A utility-first CSS framework, providing a set of pre-defined clas
 
 ### Dark & Light Theme according to device settings
 
-![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/desktop-dark.png)
+![logo](/src/screenshots/desktop-dark.png)
 
-![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/desktop-light.png)
+![logo](/src/screenshots/desktop-light.png)
 
 <br />
 
@@ -42,13 +42,13 @@ Tailwind CSS classes are used to style the components, providing a consistent an
 
 ### Responsive Design
 
-![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/mobile-dark.png)&emsp;![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/mobile-light.png)
+![logo](/src/screenshots/mobile-dark.png)&emsp;![logo](/src/screenshots/mobile-light.png)
 
 <br />
 
 ## Powerful & Fast MongoDB Atlas Search Engine
 
-![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/search-mobile-dark.png)&emsp;![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/search-mobile-light.png)
+![logo](/src/screenshots/search-mobile-dark.png)&emsp;![logo](/src/screenshots/search-mobile-light.png)
 
 <br />
 
@@ -56,21 +56,21 @@ Tailwind CSS classes are used to style the components, providing a consistent an
 
 User authentication is managed using JWT tokens obtained from the backend upon successful login. The JWT token is stored in the **Secure Response Headers** and included in the Authorization header for protected API requests also hashing passwords and save them to **MongoDB**
 
-![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/signup-mobile-dark.png)&emsp;![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/signup-mobile-light.png)
+![logo](/src/screenshots/signup-mobile-dark.png)&emsp;![logo](/src/screenshots/signup-mobile-light.png)
 
 <br />
 
 ### Uploading & Loading Images via AWS Cloud
 
-![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/upload-post-desktop-dark.png)
+![logo](/src/screenshots/upload-post-desktop-dark.png)
 
-![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/upload-story-mobile-dark.png)&emsp;![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/upload-story-mobile-light.png)
+![logo](/src/screenshots/upload-story-mobile-dark.png)&emsp;![logo](/src/screenshots/upload-story-mobile-light.png)
 
 <br />
 
 ## Notifications via MongoDB
 
-![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/notifications-mobile-dark.png)&emsp;![logo](https://github.com/hsyntes/instamern/blob/main/src/screenshots/notifications-mobile-light.png)
+![logo](/src/screenshots/notifications-mobile-dark.png)&emsp;![logo](/src/screenshots/notifications-mobile-light.png)
 
 <br />
 
