@@ -101,7 +101,12 @@ const ViewPost = ({ show, postId, handleViewPost, setSelectedPost }) => {
             <section>
               {post && <Creator postedBy={post?.postedBy} />}
               <p className="my-2">{post?.caption}</p>
-              {post && <Comments comments={post?.comments} />}
+              {post && (
+                <Comments
+                  comments={post?.comments}
+                  handleViewPost={handleViewPost}
+                />
+              )}
             </section>
           </Modal.Body>
           <Modal.Footer className="fixed lg:absolute w-full bottom-0">
