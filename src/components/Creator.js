@@ -11,7 +11,7 @@ const Creator = ({ postedBy }) => {
   if (!user) return null;
 
   return (
-    <Link to={user.username} className="flex items-center">
+    <Link to={`/${user.username}`} className="flex items-center">
       {user.photo ? (
         <img
           src={user.photo}
