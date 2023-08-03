@@ -18,12 +18,14 @@ import ForgotPasswordPage from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
 import ChangePasswordPage from "./pages/ChangePassword";
 import ChangeEmailPage from "./pages/ChangeEmail";
+import ErrorPage from "./pages/Error";
 
 // * Pages
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
+    errorElement: <ErrorPage />,
     children: [
       { index: true, element: <HomePage /> },
       { path: ":username", element: <ProfilePage /> },
