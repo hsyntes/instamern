@@ -57,9 +57,7 @@ const UploadPage = () => {
 
         queryClient.refetchQueries("getPosts");
 
-        // navigate("/");
-
-        window.location.reload();
+        navigate("/");
       }
     },
   });
