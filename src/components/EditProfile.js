@@ -95,6 +95,7 @@ const EditProfile = ({ show, handleEditProfile }) => {
 
         queryClient.refetchQueries("getUsers");
         queryClient.refetchQueries("getCurrentUser");
+        queryClient.invalidateQueries("getCurrentUser");
         queryClient.refetchQueries("getUserByUsername");
 
         handleEditProfile();
@@ -114,6 +115,7 @@ const EditProfile = ({ show, handleEditProfile }) => {
       if (data.status === "success") {
         queryClient.refetchQueries("getUsers");
         queryClient.refetchQueries("getCurrentUser");
+        queryClient.invalidateQueries("getCurrentUser");
         queryClient.refetchQueries("getUserByUsername");
 
         handleEditProfile();
