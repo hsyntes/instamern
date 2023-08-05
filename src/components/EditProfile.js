@@ -186,6 +186,7 @@ const EditProfile = ({ show, handleEditProfile }) => {
                 >
                   {selectedPhoto ? (
                     <div
+                      className="rounded-full"
                       style={{
                         width: "96px",
                         height: "96px",
