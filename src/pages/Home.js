@@ -32,11 +32,13 @@ const HomePage = () => {
 
   return (
     <Container>
-      <section className="flex items-center">
+      <section className="flex items-center mb-8">
         <section>
           <AddStory />
         </section>
-        <section className="overflow-x-scroll">{stories && <Stories stories={stories} />}</section>
+        <section className="overflow-x-scroll">
+          {stories && <Stories stories={stories} />}
+        </section>
       </section>
       <section className="lg:grid lg:grid-cols-12">
         <section className="col-span-8 lg:col-span-9 grid grid-cols-12">
