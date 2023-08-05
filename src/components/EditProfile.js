@@ -195,18 +195,26 @@ const EditProfile = ({ show, handleEditProfile }) => {
                     >
                       <img
                         src={previewPhoto}
-                        className="w-full h-full rounded-full"
+                        className="w-full h-full rounded-full object-cover"
                         alt="Preview"
                       />
                     </div>
                   ) : currentUser.photo ? (
-                    <img
-                      src={currentUser.photo}
-                      width={96}
+                    <div
                       className="rounded-full"
-                      style={{ opacity: 0.25 }}
-                      alt="User"
-                    />
+                      style={{
+                        width: "96px",
+                        height: "96px",
+                        overflow: "hidden",
+                      }}
+                    >
+                      <img
+                        src={currentUser.photo}
+                        className="w-full h-full rounded-full object-cover"
+                        style={{ opacity: 0.25 }}
+                        alt="User"
+                      />
+                    </div>
                   ) : (
                     <EmptyPhoto
                       username={currentUser.username}
