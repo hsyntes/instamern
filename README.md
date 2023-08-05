@@ -84,32 +84,6 @@ User authentication is managed using JWT tokens obtained from the backend upon s
 
 This documentation provides an overview of the frontend technologies used, project structure, and key components and pages in the InstaMERN frontend. Developers can explore the source code for more in-depth details on how each component, library, and feature is implemented.
 
-## Run Locally
-
-Clone the project
-
-```bash
-  git clone https://github.com/hsyntes/instamern
-```
-
-Go to the project directory
-
-```bash
-  cd instamern
-```
-
-Install dependencies
-
-```bash
-  npm install
-```
-
-Start the app
-
-```bash
-  npm start
-```
-
 ## 🔗 Links
 
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hsyntes)
