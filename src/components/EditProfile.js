@@ -185,12 +185,19 @@ const EditProfile = ({ show, handleEditProfile }) => {
                   }}
                 >
                   {selectedPhoto ? (
-                    <img
-                      src={previewPhoto}
-                      width={96}
-                      className="rounded-full"
-                      alt="Preview"
-                    />
+                    <div
+                      style={{
+                        width: "96px",
+                        height: "96px",
+                        overflow: "hidden",
+                      }}
+                    >
+                      <img
+                        src={previewPhoto}
+                        className="w-full h-full rounded-full"
+                        alt="Preview"
+                      />
+                    </div>
                   ) : currentUser.photo ? (
                     <img
                       src={currentUser.photo}
