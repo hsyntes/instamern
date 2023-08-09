@@ -10,7 +10,7 @@ const NotificationPage = () => {
   return (
     <Container>
       <h6 className="font-semibold text-2xl">Notifications</h6>
-      <section className="mt-3 mb-14">
+      <section className="mt-3">
         <ul className="rounded lg:w-3/4">
           <li className="flex items-start bg-light dark:bg-dark rounded p-4">
             <img src={logo} width={36} alt="App" />
