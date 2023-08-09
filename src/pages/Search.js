@@ -1,11 +1,11 @@
 import { useQuery } from "react-query";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import Container from "../components/Container";
-import Users from "../components/Users";
-import Spinner from "../components/Spinner";
-import useInput from "../hooks/useInput";
+import Container from "../components/ui/Container";
+import Users from "../components/users/Users";
+import Spinner from "../components/ui/Spinner";
 import searchUsers from "../utils/searchUsers";
+import useInput from "../hooks/useInput";
 
 const SearchPage = () => {
   const {

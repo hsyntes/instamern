@@ -8,13 +8,13 @@ import {
 } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
-import Card from "../components/Card";
-import Input from "../components/Input";
-import Button from "../components/Button";
-import Container from "../components/Container";
-import ErrorDialog from "../components/ErrorDialog";
-import Spinner from "../components/Spinner";
-import Toast from "../components/Toast";
+import Card from "../components/ui/Card";
+import Input from "../components/ui/Input";
+import Button from "../components/ui/Button";
+import Container from "../components/ui/Container";
+import ErrorDialog from "../components/ui/ErrorDialog";
+import Spinner from "../components/ui/Spinner";
+import Toast from "../components/ui/Toast";
 import useInput from "../hooks/useInput";
 import logo from "../logo.svg";
 

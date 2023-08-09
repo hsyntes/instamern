@@ -4,13 +4,13 @@ import { useMutation, useQueryClient } from "react-query";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faImage } from "@fortawesome/free-regular-svg-icons";
-import Container from "../components/Container";
-import Button from "../components/Button";
-import ErrorDialog from "../components/ErrorDialog";
-import Toast from "../components/Toast";
-import Spinner from "../components/Spinner";
-import useInput from "../hooks/useInput";
+import Container from "../components/ui/Container";
+import Button from "../components/ui/Button";
+import ErrorDialog from "../components/ui/ErrorDialog";
+import Toast from "../components/ui/Toast";
+import Spinner from "../components/ui/Spinner";
 import uploadPost from "../utils/uploadPost";
+import useInput from "../hooks/useInput";
 
 const UploadPage = () => {
   const [selectedPhoto, setSelectedPhoto] = useState(null);

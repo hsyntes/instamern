@@ -1,5 +1,5 @@
 import { createPortal } from "react-dom";
-import logo from "../logo.svg";
+import logo from "../../logo.svg";
 import Brand from "./Brand";
 
 const Splash = () =>

@@ -1,14 +1,14 @@
 import { useQuery } from "react-query";
-import Container from "../components/Container";
-import Users from "../components/Users";
-import Posts from "../components/Posts";
-import Spinner from "../components/Spinner";
+import Container from "../components/ui/Container";
+import Users from "../components/users/Users";
+import Posts from "../components/posts/Posts";
+import Spinner from "../components/ui/Spinner";
 import getPosts from "../utils/getPosts";
 import getUsers from "../utils/getUsers";
-import Splash from "../components/Splash";
+import Splash from "../components/ui/Splash";
 import getStories from "../utils/getStories";
-import Stories from "../components/Stories";
-import AddStory from "../components/AddStory";
+import Stories from "../components/stories/Stories";
+import AddStory from "../components/stories/AddStory";
 
 const HomePage = () => {
   const { data: users, isLoading: isUsersLoading } = useQuery({

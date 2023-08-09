@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import { Form, Link, useNavigate, useNavigation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
-import Card from "./Card";
-import Input from "./Input";
-import Button from "./Button";
-import Spinner from "./Spinner";
-import useInput from "../hooks/useInput";
-import logo from "../logo.svg";
+import Card from "../ui/Card";
+import Input from "../ui/Input";
+import Button from "../ui/Button";
+import Spinner from "../ui/Spinner";
+import useInput from "../../hooks/useInput";
+import logo from "../../logo.svg";
 
 const Signup = () => {
   const [isFormValid, setIsFormValid] = useState(false);

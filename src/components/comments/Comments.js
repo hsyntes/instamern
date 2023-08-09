@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import EmptyPhoto from "./EmptyPhoto";
 import { useQuery } from "react-query";
-import getUserById from "../utils/getUserById";
+import EmptyPhoto from "../ui/EmptyPhoto";
+import getUserById from "../../utils/getUserById";
 
 const CommentLists = ({ comment, handleViewPost }) => {
   const { data: user } = useQuery(["getUserById", comment.commentedBy], () =>

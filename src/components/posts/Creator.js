@@ -1,7 +1,7 @@
 import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
-import EmptyPhoto from "./EmptyPhoto";
-import getUserById from "../utils/getUserById";
+import EmptyPhoto from "../ui/EmptyPhoto";
+import getUserById from "../../utils/getUserById";
 
 const Creator = ({ postedBy }) => {
   const { data: user } = useQuery(["getUserById", postedBy], () =>

@@ -6,17 +6,17 @@ import {
   useNavigate,
   useNavigation,
 } from "react-router-dom";
-import useInput from "../hooks/useInput";
-import Container from "../components/Container";
-import Card from "../components/Card";
-import logo from "../logo.svg";
-import Input from "../components/Input";
+import Container from "../components/ui/Container";
+import Card from "../components/ui/Card";
+import Input from "../components/ui/Input";
+import Button from "../components/ui/Button";
+import Spinner from "../components/ui/Spinner";
+import ErrorDialog from "../components/ui/ErrorDialog";
+import Toast from "../components/ui/Toast";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
-import Button from "../components/Button";
-import Spinner from "../components/Spinner";
-import ErrorDialog from "../components/ErrorDialog";
-import Toast from "../components/Toast";
+import useInput from "../hooks/useInput";
+import logo from "../logo.svg";
 
 const ResetPassword = () => {
   const actionData = useActionData();

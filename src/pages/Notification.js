@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
-import Container from "../components/Container";
+import Container from "../components/ui/Container";
+import NotificationLists from "../components/notifications/NotificationLists";
 import logo from "../logo.svg";
-import NotificationLists from "../components/NotificationLists";
 
 const NotificationPage = () => {
   const userState = useSelector((state) => state.currentUser);

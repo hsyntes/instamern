@@ -7,12 +7,12 @@ import {
   faImage,
   faTimes,
 } from "@fortawesome/free-solid-svg-icons";
-import Modal from "./Modal";
-import Button from "./Button";
-import Spinner from "./Spinner";
-import uploadStory from "../utils/uploadStory";
-import ErrorDialog from "./ErrorDialog";
-import Toast from "./Toast";
+import Modal from "../ui/Modal";
+import Button from "../ui/Button";
+import Spinner from "../ui/Spinner";
+import uploadStory from "../../utils/uploadStory";
+import ErrorDialog from "../ui/ErrorDialog";
+import Toast from "../ui/Toast";
 
 const UploadStory = ({ show, handleUploadStory }) => {
   const [selectedPhoto, setSelectedPhoto] = useState(null);
@@ -124,7 +124,11 @@ const UploadStory = ({ show, handleUploadStory }) => {
                 <p className="font-light my-3">Upload a story</p>
               </>
             ) : (
-              <img src={previewPhoto} className="rounded w-full cursor-pointer" alt="Story" />
+              <img
+                src={previewPhoto}
+                className="rounded w-full cursor-pointer"
+                alt="Story"
+              />
             )}
           </center>
         </Modal.Body>

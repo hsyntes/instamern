@@ -4,13 +4,13 @@ import { Link, useNavigate } from "react-router-dom";
 import { useMutation, useQueryClient } from "react-query";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import logo from "../logo.svg";
 import Button from "./Button";
 import Container from "./Container";
 import Brand from "./Brand";
 import Settings from "./Settings";
-import logout from "../utils/logout";
+import logout from "../../utils/logout";
 import Cookies from "js-cookie";
+import logo from "../../logo.svg";
 
 const Header = () => {
   const [settings, setSettings] = useState(false);

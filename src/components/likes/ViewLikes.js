@@ -2,13 +2,12 @@ import { Link } from "react-router-dom";
 import { useQuery } from "react-query";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
-import Modal from "./Modal";
-import Spinner from "./Spinner";
-import EmptyPhoto from "./EmptyPhoto";
-import getUserById from "../utils/getUserById";
+import Modal from "../ui/Modal";
+import Spinner from "../ui/Spinner";
+import EmptyPhoto from "../ui/EmptyPhoto";
+import getUserById from "../../utils/getUserById";
 
 const LikeLists = ({ item }) => {
-
   const { data: user } = useQuery(["getUserById", item], () =>
     getUserById(item)
   );

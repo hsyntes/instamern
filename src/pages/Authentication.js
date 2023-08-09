@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { useActionData, useNavigate, useSearchParams } from "react-router-dom";
 import { useQueryClient } from "react-query";
-import Container from "../components/Container";
-import Login from "../components/Login";
-import Signup from "../components/Signup";
-import ErrorDialog from "../components/ErrorDialog";
+import Container from "../components/ui/Container";
+import Login from "../components/auth/Login";
+import Signup from "../components/auth/Signup";
+import ErrorDialog from "../components/ui/ErrorDialog";
 
 const AuthenticationPage = () => {
   const [searchParams] = useSearchParams();

@@ -10,7 +10,7 @@ import ProfilePage from "./pages/Profile";
 import AuthenticationPage from "./pages/Authentication";
 import getCurrentUser from "./utils/getCurrentUser";
 import { currentUserSliceActions } from "./store/user/user-slice";
-import Splash from "./components/Splash";
+import Splash from "./components/ui/Splash";
 import SearchPage from "./pages/Search";
 import NotificationPage from "./pages/Notification";
 import UploadPage from "./pages/Upload";

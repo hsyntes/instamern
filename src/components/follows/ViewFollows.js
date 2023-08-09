@@ -1,16 +1,15 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Modal from "./Modal";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
-import { useQuery } from "react-query";
-import getUserById from "../utils/getUserById";
 import { Link } from "react-router-dom";
-import EmptyPhoto from "./EmptyPhoto";
+import { useQuery } from "react-query";
+import Modal from "../ui/Modal";
+import EmptyPhoto from "../ui/EmptyPhoto";
+import getUserById from "../../utils/getUserById";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const FollowLists = ({ item, handleViewFollows, setViewFollows }) => {
   const { data: user } = useQuery(["getUserById", item], {
     queryFn: () => getUserById(item),
   });
-
 
   return (
     <li className="mb-4">

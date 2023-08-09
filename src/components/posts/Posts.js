@@ -10,18 +10,18 @@ import {
   faComment,
   faHeart as faHeartRegular,
 } from "@fortawesome/free-regular-svg-icons";
-import Card from "./Card";
-import Button from "./Button";
-import ViewPost from "./ViewPost";
-import ViewLikes from "./ViewLikes";
-import ErrorDialog from "./ErrorDialog";
+import Card from "../ui/Card";
+import Button from "../ui/Button";
+import ViewPost from "../posts/ViewPost";
+import ViewLikes from "../likes/ViewLikes";
+import ErrorDialog from "../ui/ErrorDialog";
 import Creator from "./Creator";
-import getPost from "../utils/getPost";
-import makeComment from "../utils/makeComment";
-import likePost from "../utils/likePost";
-import useInput from "../hooks/useInput";
-import Spinner from "./Spinner";
-import Toast from "./Toast";
+import getPost from "../../utils/getPost";
+import makeComment from "../../utils/makeComment";
+import likePost from "../../utils/likePost";
+import useInput from "../../hooks/useInput";
+import Spinner from "../ui/Spinner";
+import Toast from "../ui/Toast";
 
 const PostLists = ({ items }) => {
   const [selectedPost, setSelectedPost] = useState(null);

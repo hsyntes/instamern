@@ -1,16 +1,16 @@
 import { useMutation, useQuery, useQueryClient } from "react-query";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faTimes } from "@fortawesome/free-solid-svg-icons";
-import Modal from "./Modal";
-import Comments from "./Comments";
-import getPost from "../utils/getPost";
-import Spinner from "./Spinner";
+import Modal from "../ui/Modal";
+import Comments from "../comments/Comments";
+import getPost from "../../utils/getPost";
+import Spinner from "../ui/Spinner";
 import Creator from "./Creator";
-import useInput from "../hooks/useInput";
+import useInput from "../../hooks/useInput";
 import { faPaperPlane } from "@fortawesome/free-regular-svg-icons";
-import makeComment from "../utils/makeComment";
+import makeComment from "../../utils/makeComment";
 import { useState } from "react";
-import ErrorDialog from "./ErrorDialog";
+import ErrorDialog from "../ui/ErrorDialog";
 
 const ViewPost = ({ show, postId, handleViewPost, setSelectedPost }) => {
   const queryClient = useQueryClient();

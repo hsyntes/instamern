@@ -1,6 +1,6 @@
 import { useQuery } from "react-query";
-import getUserById from "../utils/getUserById";
-import EmptyPhoto from "./EmptyPhoto";
+import getUserById from "../../utils/getUserById";
+import EmptyPhoto from "../ui/EmptyPhoto";
 
 const NotificationLists = ({ item }) => {
   const { data: userBy } = useQuery(["getUserById", item], () =>

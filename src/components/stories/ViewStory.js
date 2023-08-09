@@ -1,11 +1,11 @@
+import { useState } from "react";
+import Modal from "../ui/Modal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Modal from "./Modal";
 import {
   faAngleLeft,
   faAngleRight,
   faTimes,
 } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
 
 const ViewStory = ({ show, selectedStories, handleViewStory }) => {
   const [currentStory, setCurrentStory] = useState(0);

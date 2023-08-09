@@ -4,17 +4,17 @@ import { useNavigate } from "react-router-dom";
 import { useMutation, useQueryClient } from "react-query";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCamera, faCheck, faTimes } from "@fortawesome/free-solid-svg-icons";
-import Modal from "./Modal";
-import Input from "./Input";
-import Button from "./Button";
-import updateMe from "../utils/updateMe";
-import useInput from "../hooks/useInput";
-import Spinner from "./Spinner";
-import EmptyPhoto from "./EmptyPhoto";
-import uploadPhoto from "../utils/uploadPhoto";
-import removePhoto from "../utils/removePhoto";
-import Toast from "./Toast";
-import ErrorDialog from "./ErrorDialog";
+import Modal from "../ui/Modal";
+import Input from "../ui/Input";
+import Button from "../ui/Button";
+import useInput from "../../hooks/useInput";
+import Spinner from "../ui/Spinner";
+import EmptyPhoto from "../ui/EmptyPhoto";
+import Toast from "../ui/Toast";
+import ErrorDialog from "../ui/ErrorDialog";
+import updateMe from "../../utils/updateMe";
+import uploadPhoto from "../../utils/uploadPhoto";
+import removePhoto from "../../utils/removePhoto";
 
 const EditProfile = ({ show, handleEditProfile }) => {
   const userState = useSelector((state) => state.currentUser);

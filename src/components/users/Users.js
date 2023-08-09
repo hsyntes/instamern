@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { useMutation, useQueryClient } from "react-query";
-import Button from "./Button";
-import EmptyPhoto from "./EmptyPhoto";
-import Toast from "./Toast";
-import follow from "../utils/follow";
+import Button from "../ui/Button";
+import EmptyPhoto from "../ui/EmptyPhoto";
+import Toast from "../ui/Toast";
+import follow from "../../utils/follow";
 
 const UserLists = ({ items, toast, setToast, setToastMessage }) => {
   const queryClient = useQueryClient();

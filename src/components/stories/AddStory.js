@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import EmptyPhoto from "./EmptyPhoto";
+import EmptyPhoto from "../ui/EmptyPhoto";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlusCircle } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
