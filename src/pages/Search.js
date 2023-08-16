@@ -23,7 +23,7 @@ const SearchPage = () => {
   );
 
   return (
-    <Container className="lg:!w-3/4">
+    <Container>
       <div className="form-group relative">
         <input
           type="text"
