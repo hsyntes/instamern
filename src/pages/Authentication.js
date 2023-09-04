@@ -50,11 +50,14 @@ const AuthenticationPage = () => {
 
 // React-Router action
 export const action = async ({ request }) => {
+  // Get authentiocation mode based on the search query
   const searchParams = new URL(request.url).searchParams;
 
+  // Get the current mode
   const mode = searchParams.get("mode");
   const formData = await request.formData();
 
+  // login
   if (mode === "login") {
     const response = await fetch(
       "https://instamern-3cda0fa07039.herokuapp.com/instamern/users/login",
@@ -77,6 +80,7 @@ export const action = async ({ request }) => {
     return data;
   }
 
+  // signup
   if (mode === "signup") {
     const response = await fetch(
       "https://instamern-3cda0fa07039.herokuapp.com/instamern/users/signup",
