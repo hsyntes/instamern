@@ -4,7 +4,7 @@ import Navbar from "../components/ui/Navbar";
 
 const RootLayout = () => {
   return (
-    // * Grid layout
+    //  Grid layout
     <div className="lg:grid lg:grid-cols-12">
       <div className="App mt-4 px-4 lg:mt-20 lg:px-20 col-span-10 order-1">
         <Header />
