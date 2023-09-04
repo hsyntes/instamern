@@ -20,6 +20,7 @@ import Cookies from "js-cookie";
 import logo from "../logo.svg";
 
 const ChangeEmailPage = () => {
+  // Get form data from React-Router action func.
   const actionData = useActionData();
   const [errorDialog, setErrorDialog] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
@@ -47,6 +48,7 @@ const ChangeEmailPage = () => {
 
   const handleErrorDialog = () => setErrorDialog(!errorDialog);
 
+  // Set error/toast messages based on the action data
   useEffect(() => {
     if (actionData?.status === "fail") {
       setErrorDialog(true);
@@ -63,6 +65,7 @@ const ChangeEmailPage = () => {
     }
   }, [actionData, navigate]);
 
+  // Update form validation based on the value
   useEffect(() => {
     const identifier = setTimeout(
       () => setIsFormValid(isCurrentPasswordValid && isEmailValid),

@@ -14,6 +14,7 @@ const Signup = () => {
   const navigation = useNavigation();
   const navigate = useNavigate();
 
+  // Update input values based on the custom hook
   const {
     state: {
       value: firstname,
@@ -70,6 +71,7 @@ const Signup = () => {
     handleOnBlur: handlePasswordConfirmOnBlur,
   } = useInput();
 
+  // Update the form validation
   useEffect(() => {
     const identifier = setTimeout(
       () =>
