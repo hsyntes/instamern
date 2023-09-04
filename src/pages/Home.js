@@ -11,17 +11,20 @@ import Stories from "../components/stories/Stories";
 import AddStory from "../components/stories/AddStory";
 
 const HomePage = () => {
+  // Fetch the current user
   const { data: users, isLoading: isUsersLoading } = useQuery({
     queryKey: "getUsers",
     queryFn: getUsers,
     // refetchOnWindowFocus: false,
   });
 
+  // Fetch stories
   const { data: stories } = useQuery({
     queryKey: "getStories",
     queryFn: getStories,
   });
 
+  // Fetch users' posts
   const { data: posts, isLoading: isPostsLoading } = useQuery({
     queryKey: "getPosts",
     queryFn: getPosts,

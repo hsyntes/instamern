@@ -19,6 +19,7 @@ import useInput from "../hooks/useInput";
 import logo from "../logo.svg";
 
 const ForgotPasswordPage = () => {
+  // Get form data from React-Router action func.
   const actionData = useActionData();
   const [errorDialog, setErrorDialog] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
@@ -36,6 +37,7 @@ const ForgotPasswordPage = () => {
 
   const handleErrorDialog = () => setErrorDialog(!errorDialog);
 
+  // Set error/toast messages based on the action data
   useEffect(() => {
     if (actionData?.status === "fail") {
       setErrorDialog(true);
@@ -52,6 +54,7 @@ const ForgotPasswordPage = () => {
     }
   }, [actionData, navigate]);
 
+  // Update form validation based on the value
   useEffect(() => {
     const identifier = setTimeout(() => setIsFormValid(isEmailValid), 350);
 
