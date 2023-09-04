@@ -46,6 +46,7 @@ const PostLists = ({ items }) => {
   const handleViewPost = () => setViewPost(!viewPost);
   const handleErrorDialog = () => setErrorDialog(!errorDialog);
 
+  // Get the post based on the selected
   const { data: post, isLoading: isPostLoading } = useQuery(
     ["getPost", selectedPost],
     () => selectedPost && getPost(selectedPost),
@@ -54,6 +55,7 @@ const PostLists = ({ items }) => {
     }
   );
 
+  // Add comment to the post
   const mutationComment = useMutation(makeComment, {
     onSuccess: (data) => {
       queryClient.invalidateQueries("getPost");
@@ -68,6 +70,7 @@ const PostLists = ({ items }) => {
     },
   });
 
+  // Like the photo
   const mutationLike = useMutation(likePost, {
     onSuccess: (data) => {
       queryClient.invalidateQueries("likePost");

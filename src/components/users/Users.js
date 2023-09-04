@@ -11,6 +11,7 @@ const UserLists = ({ items, toast, setToast, setToastMessage }) => {
   const queryClient = useQueryClient();
   const userState = useSelector((state) => state.currentUser);
 
+  // Follow users
   const mutationFollow = useMutation(follow, {
     onSuccess: (data) => {
       setToast(true);

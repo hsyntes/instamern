@@ -4,6 +4,7 @@ import Button from "../ui/Button";
 import EmptyPhoto from "../ui/EmptyPhoto";
 
 const Sharer = ({ storiedBy, onClick }) => {
+  // Get the story owner
   const { data: user } = useQuery(["getUserById", storiedBy], () =>
     getUserById(storiedBy)
   );

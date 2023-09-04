@@ -25,6 +25,7 @@ const UploadStory = ({ show, handleUploadStory }) => {
   const selectPhotoRef = useRef();
   const queryClient = useQueryClient();
 
+  // Get the story photo from user's device
   const handleSelectPhoto = async (e) => {
     const photo = await e.target.files[0];
 
@@ -37,6 +38,7 @@ const UploadStory = ({ show, handleUploadStory }) => {
     }
   };
 
+  // Upload the story
   const mutationUpload = useMutation(uploadStory, {
     onSuccess: (data) => {
       if (data.status === "fail") {
@@ -57,6 +59,7 @@ const UploadStory = ({ show, handleUploadStory }) => {
     },
   });
 
+  // Add story photo on the form data
   const handleUpload = () => {
     const formData = new FormData();
     formData.append("story", selectedPhoto);

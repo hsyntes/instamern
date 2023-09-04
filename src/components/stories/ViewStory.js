@@ -10,11 +10,13 @@ import {
 const ViewStory = ({ show, selectedStories, handleViewStory }) => {
   const [currentStory, setCurrentStory] = useState(0);
 
+  // The next story
   const handleNextStory = () => {
     if (currentStory < selectedStories.length - 1)
       setCurrentStory(currentStory + 1);
   };
 
+  // The previous story
   const handlePrevStory = () => {
     if (currentStory <= selectedStories.length && currentStory > 0)
       setCurrentStory(currentStory - 1);

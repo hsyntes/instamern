@@ -17,6 +17,7 @@ const ViewPost = ({ show, postId, handleViewPost, setSelectedPost }) => {
   const [errorDialog, setErrorDialog] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
 
+  // Get the selected post
   const { data: post, isLoading: isPostLoading } = useQuery(
     ["getPost", postId],
     {
@@ -30,6 +31,7 @@ const ViewPost = ({ show, postId, handleViewPost, setSelectedPost }) => {
     handleClear: commentClear,
   } = useInput();
 
+  // Add comment
   const mutationComment = useMutation(makeComment, {
     onSuccess: (data) => {
       queryClient.invalidateQueries("getPost");
