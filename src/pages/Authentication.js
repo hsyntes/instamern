@@ -7,6 +7,7 @@ import Signup from "../components/auth/Signup";
 import ErrorDialog from "../components/ui/ErrorDialog";
 
 const AuthenticationPage = () => {
+  // Get the query params
   const [searchParams] = useSearchParams();
   const actionData = useActionData();
   const [errorDialog, setErrorDialog] = useState(false);
@@ -14,6 +15,7 @@ const AuthenticationPage = () => {
   const queryClient = useQueryClient();
   const navigate = useNavigate();
 
+  // Get the mode based on the query param
   const mode = searchParams.get("mode");
 
   const handleErrorDialog = () => setErrorDialog(!errorDialog);
@@ -46,6 +48,7 @@ const AuthenticationPage = () => {
   );
 };
 
+// React-Router action
 export const action = async ({ request }) => {
   const searchParams = new URL(request.url).searchParams;
 
