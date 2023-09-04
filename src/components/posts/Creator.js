@@ -4,6 +4,7 @@ import EmptyPhoto from "../ui/EmptyPhoto";
 import getUserById from "../../utils/getUserById";
 
 const Creator = ({ postedBy }) => {
+  // Fetch the creator that shared the post
   const { data: user } = useQuery(["getUserById", postedBy], () =>
     getUserById(postedBy)
   );

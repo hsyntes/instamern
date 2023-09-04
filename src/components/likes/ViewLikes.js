@@ -8,6 +8,7 @@ import EmptyPhoto from "../ui/EmptyPhoto";
 import getUserById from "../../utils/getUserById";
 
 const LikeLists = ({ item }) => {
+  // Fetch users that likes the photo
   const { data: user } = useQuery(["getUserById", item], () =>
     getUserById(item)
   );

@@ -20,6 +20,7 @@ import Cookies from "js-cookie";
 import logo from "../logo.svg";
 
 const ChangePasswordPage = () => {
+  // Get form data from React-Router action func.
   const actionData = useActionData();
   const [errorDialog, setErrorDialog] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
@@ -29,6 +30,7 @@ const ChangePasswordPage = () => {
   const navigation = useNavigation();
   const navigate = useNavigate();
 
+  // Update values based on the custom hook
   const {
     state: {
       value: currentPassword,
@@ -61,6 +63,7 @@ const ChangePasswordPage = () => {
 
   const handleErrorDialog = () => setErrorDialog(!errorDialog);
 
+  // Set error/toast messages based on the action data
   useEffect(() => {
     if (actionData?.status === "fail") {
       setErrorDialog(true);
@@ -77,6 +80,7 @@ const ChangePasswordPage = () => {
     }
   }, [actionData, navigate]);
 
+  // Update form validation based on the value
   useEffect(() => {
     const identifier = setTimeout(
       () =>

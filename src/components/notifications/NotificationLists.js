@@ -3,6 +3,7 @@ import getUserById from "../../utils/getUserById";
 import EmptyPhoto from "../ui/EmptyPhoto";
 
 const NotificationLists = ({ item }) => {
+  // Get current users's noitifcations
   const { data: userBy } = useQuery(["getUserById", item], () =>
     getUserById(item.notifiedBy)
   );

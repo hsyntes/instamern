@@ -18,6 +18,7 @@ import follow from "../utils/follow";
 import Cookies from "js-cookie";
 
 const ProfilePage = () => {
+  // Get the variable on the URL
   const params = useParams();
   const [viewFollows, setViewFollows] = useState(false);
   const [follows, setFollows] = useState(null);

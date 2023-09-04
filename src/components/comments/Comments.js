@@ -4,6 +4,7 @@ import EmptyPhoto from "../ui/EmptyPhoto";
 import getUserById from "../../utils/getUserById";
 
 const CommentLists = ({ comment, handleViewPost }) => {
+  // Fetch comments based on the user id
   const { data: user } = useQuery(["getUserById", comment.commentedBy], () =>
     getUserById(comment.commentedBy)
   );
