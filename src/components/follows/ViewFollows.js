@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const FollowLists = ({ item, handleViewFollows, setViewFollows }) => {
+  // Get user by userId
   const { data: user } = useQuery(["getUserById", item], {
     queryFn: () => getUserById(item),
   });

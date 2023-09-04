@@ -30,6 +30,7 @@ const EditProfile = ({ show, handleEditProfile }) => {
 
   const { currentUser } = userState;
 
+  // Input values based on the custom hooks
   const {
     state: { value: firstname },
     handleOnChange: firstnameOnChange,

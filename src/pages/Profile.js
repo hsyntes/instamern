@@ -18,7 +18,6 @@ import follow from "../utils/follow";
 import Cookies from "js-cookie";
 
 const ProfilePage = () => {
-  // Get the variable on the URL
   const params = useParams();
   const [viewFollows, setViewFollows] = useState(false);
   const [follows, setFollows] = useState(null);
@@ -35,9 +34,11 @@ const ProfilePage = () => {
   const queryClient = useQueryClient();
   const navigate = useNavigate();
 
+  // Get the variable on the URL
   const { username } = params;
   const { currentUser } = userState;
 
+  // Get the user by username
   const { data: user, isLoading: isUserLoading } = useQuery(
     ["getUserByUsername", username],
     {
@@ -46,6 +47,7 @@ const ProfilePage = () => {
     }
   );
 
+  // React-query logout functionality
   const mutationLogout = useMutation(logout, {
     onSuccess: () => {
       Cookies.remove("jsonwebtoken");
@@ -59,6 +61,7 @@ const ProfilePage = () => {
     },
   });
 
+  // React-query follow functionality
   const mutationFollow = useMutation(follow, {
     onSuccess: (data) => {
       if (data.status === "fail") {
@@ -77,6 +80,7 @@ const ProfilePage = () => {
     },
   });
 
+  // handles
   const handleViewFollows = () => setViewFollows(!viewFollows);
   const handleViewPost = () => setViewPost(!viewPost);
   const handleSettings = () => setSettings(!settings);
@@ -88,6 +92,7 @@ const ProfilePage = () => {
   const handleLogout = () => mutationLogout.mutate({});
   const handleErrorDialog = () => setErrorDialog(!errorDialog);
 
+  // Set toast messages
   useEffect(() => {
     const identifier = setTimeout(() => {
       if (toast) {
@@ -99,6 +104,7 @@ const ProfilePage = () => {
     return () => clearTimeout(identifier);
   }, [toast, setToast, setToastMessage]);
 
+  // Return spinner loading
   if (isUserLoading)
     return (
       <center>
