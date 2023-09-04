@@ -12,6 +12,7 @@ const Login = () => {
   const navigation = useNavigation();
   const navigate = useNavigate();
 
+  // Set input values based on the custom hook
   const {
     state: { value: username, isValid: isUsernameValid },
     handleOnChange: handleUsernameOnChange,
@@ -24,6 +25,7 @@ const Login = () => {
     handleOnBlur: handlePasswordOnBlur,
   } = useInput();
 
+  // Update form validation
   useEffect(() => {
     const identifier = setTimeout(() => {
       setIsFormValid(isUsernameValid && isPasswordValid);

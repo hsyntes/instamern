@@ -20,7 +20,7 @@ import ChangePasswordPage from "./pages/ChangePassword";
 import ChangeEmailPage from "./pages/ChangeEmail";
 import ErrorPage from "./pages/Error";
 
-// * Pages
+// React-router pages
 const router = createBrowserRouter([
   {
     path: "/",
@@ -80,27 +80,27 @@ function App() {
   const themeState = useSelector((state) => state.theme);
   const dispatch = useDispatch();
 
-  // * Fetching current user
+  // Fetching current user
   const { data: user, isLoading: isUserLoading } = useQuery("getCurrentUser", {
     queryFn: getCurrentUser,
   });
 
   const { theme } = themeState;
 
-  // * Switching theme dynamically
+  // Switching theme dynamically
   window
     .matchMedia("(prefers-color-scheme: dark)")
     .addEventListener("change", (e) =>
       dispatch(themeSliceActions.switchTheme(e.matches ? "dark" : "light"))
     );
 
-  // * Setting current user to redux
+  //  Setting current user to redux
   useEffect(() => {
     if (user) dispatch(currentUserSliceActions.setCurrentUser(user));
     else dispatch(currentUserSliceActions.setCurrentUser(null));
   }, [user, dispatch]);
 
-  // * Implementing dark & light theme
+  //  Implementing dark & light theme
   useEffect(() => {
     const [html, body] = [
       document.querySelector("html"),
