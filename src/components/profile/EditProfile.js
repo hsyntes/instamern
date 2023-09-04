@@ -51,6 +51,7 @@ const EditProfile = ({ show, handleEditProfile }) => {
     handleOnChange: handleBioOnChange,
   } = useInput();
 
+  // Select photos from the user's device
   const handleSelectPhoto = async (e) => {
     const photo = await e.target.files[0];
     if (photo) {
@@ -62,6 +63,7 @@ const EditProfile = ({ show, handleEditProfile }) => {
     }
   };
 
+  // Update the profile
   const mutationUpdate = useMutation(updateMe, {
     onSuccess: (data) => {
       if (data.status === "fail") {
@@ -83,6 +85,7 @@ const EditProfile = ({ show, handleEditProfile }) => {
     },
   });
 
+  // Upload the user's photo
   const mutationUpload = useMutation(uploadPhoto, {
     onSuccess: (data) => {
       if (data.status === "fail") {
@@ -106,6 +109,7 @@ const EditProfile = ({ show, handleEditProfile }) => {
     },
   });
 
+  // Remove the user's photo
   const mutationRemove = useMutation(removePhoto, {
     onSuccess: (data) => {
       if (data.status === "fail") {

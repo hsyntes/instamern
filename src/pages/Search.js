@@ -8,11 +8,13 @@ import searchUsers from "../utils/searchUsers";
 import useInput from "../hooks/useInput";
 
 const SearchPage = () => {
+  // Get the search value based on the custom hook
   const {
     state: { value: search, isValid: isSearchValid },
     handleOnChange: handleSearchOnChange,
   } = useInput();
 
+  // Get users searched
   const { data: users, isLoading: isUsersLoading } = useQuery(
     ["searchUsers", search],
     {

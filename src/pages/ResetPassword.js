@@ -19,6 +19,7 @@ import useInput from "../hooks/useInput";
 import logo from "../logo.svg";
 
 const ResetPassword = () => {
+  // Get form data from the React-Router action func.
   const actionData = useActionData();
   const [errorDialog, setErrorDialog] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
@@ -28,6 +29,7 @@ const ResetPassword = () => {
   const navigation = useNavigation();
   const navigate = useNavigate();
 
+  // Update the input values based on the custom hook
   const {
     state: {
       value: password,
@@ -50,6 +52,7 @@ const ResetPassword = () => {
 
   const handleErrorDialog = () => setErrorDialog(!errorDialog);
 
+  // Set error/toast messages based on the action data
   useEffect(() => {
     if (actionData?.status === "fail") {
       setErrorDialog(true);
@@ -66,6 +69,7 @@ const ResetPassword = () => {
     }
   }, [actionData, navigate]);
 
+  // Update form validation
   useEffect(() => {
     const identifier = setTimeout(
       () => setIsFormValid(isPasswordValid && isPasswordConfirmValid),

@@ -24,6 +24,7 @@ const UploadPage = () => {
   const userState = useSelector((state) => state.currentUser);
   const { currentUser } = userState;
 
+  // Set error dialog states
   const handleErrorDialog = () => {
     setErrorDialog(false);
     setErrorMessage(null);
@@ -33,6 +34,7 @@ const UploadPage = () => {
 
   const selectPhotoRef = useRef();
 
+  // Select the post photo from the user's device
   const handleSelectPhoto = async (e) => {
     const photo = await e.target.files[0];
     if (photo) {
@@ -44,6 +46,7 @@ const UploadPage = () => {
     }
   };
 
+  // Upload the post
   const mutationUpload = useMutation(uploadPost, {
     onSuccess: (data) => {
       if (data.status === "fail") {
@@ -62,6 +65,7 @@ const UploadPage = () => {
     },
   });
 
+  // Adding the photos form data
   const handleUpload = () => {
     const formData = new FormData();
     formData.append("post", selectedPhoto);

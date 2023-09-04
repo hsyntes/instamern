@@ -20,6 +20,7 @@ const Header = () => {
 
   const { currentUser } = userState;
 
+  // Logout functionality
   const mutationLogout = useMutation(logout, {
     onSuccess: () => {
       Cookies.remove("jsonwebtoken");
