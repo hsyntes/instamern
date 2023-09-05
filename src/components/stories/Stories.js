@@ -23,11 +23,13 @@ const StoryLists = ({ items }) => {
           </li>
         ))}
       </ul>
-      <ViewStory
-        show={viewStory}
-        selectedStories={selectedStories}
-        handleViewStory={handleViewStory}
-      />
+      {viewStory && (
+        <ViewStory
+          show={viewStory}
+          selectedStories={selectedStories}
+          handleViewStory={handleViewStory}
+        />
+      )}
     </>
   );
 };
