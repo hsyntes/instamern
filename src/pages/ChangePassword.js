@@ -93,6 +93,10 @@ const ChangePasswordPage = () => {
     return () => clearTimeout(identifier);
   }, [isPasswordValid, isPasswordConfirmValid, isCurrentPasswordValid]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Container className="h-screen flex items-center justify-center my-8">

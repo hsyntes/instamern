@@ -34,6 +34,10 @@ const AuthenticationPage = () => {
     }
   }, [actionData, queryClient, navigate]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Container className="h-screen flex items-center justify-center my-8">

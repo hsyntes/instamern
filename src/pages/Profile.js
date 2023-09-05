@@ -104,6 +104,10 @@ const ProfilePage = () => {
     return () => clearTimeout(identifier);
   }, [toast, setToast, setToastMessage]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   // Return spinner loading
   if (isUserLoading)
     return (

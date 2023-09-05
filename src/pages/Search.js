@@ -6,6 +6,7 @@ import Users from "../components/users/Users";
 import Spinner from "../components/ui/Spinner";
 import searchUsers from "../utils/searchUsers";
 import useInput from "../hooks/useInput";
+import { useEffect } from "react";
 
 const SearchPage = () => {
   // Get the search value based on the custom hook
@@ -23,6 +24,10 @@ const SearchPage = () => {
       },
     }
   );
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <Container>

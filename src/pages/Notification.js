@@ -2,10 +2,15 @@ import { useSelector } from "react-redux";
 import Container from "../components/ui/Container";
 import NotificationLists from "../components/notifications/NotificationLists";
 import logo from "../logo.svg";
+import { useEffect } from "react";
 
 const NotificationPage = () => {
   const userState = useSelector((state) => state.currentUser);
   const { currentUser } = userState;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <Container>
