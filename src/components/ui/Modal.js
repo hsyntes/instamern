@@ -3,16 +3,16 @@ import { createPortal } from "react-dom";
 import { motion } from "framer-motion";
 
 const Modal = ({ show, className, children }) => {
-  // useEffect(() => {
-  //   const body = document.querySelector("body");
+  useEffect(() => {
+    const body = document.querySelector("body");
 
-  //   if (show) body.style.overflow = "hidden";
-  //   else body.style.overflow = "auto";
+    if (show) body.style.overflow = "hidden";
+    else body.style.overflow = "auto";
 
-  //   return () => {
-  //     document.body.style.overflow = "auto";
-  //   };
-  // }, [show]);
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [show]);
 
   if (!show) return null;
 
