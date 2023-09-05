@@ -22,6 +22,7 @@ import likePost from "../../utils/likePost";
 import useInput from "../../hooks/useInput";
 import Spinner from "../ui/Spinner";
 import Toast from "../ui/Toast";
+import InputComment from "../comments/InputComment";
 
 const PostLists = ({ items }) => {
   const [selectedPost, setSelectedPost] = useState(null);
@@ -36,11 +37,11 @@ const PostLists = ({ items }) => {
 
   const { currentUser } = userState;
 
-  const {
-    state: { value: comment },
-    handleOnChange: handleCommentOnChange,
-    handleClear: commentClear,
-  } = useInput();
+  // const {
+  //   state: { value: comment },
+  //   handleOnChange: handleCommentOnChange,
+  //   handleClear: commentClear,
+  // } = useInput();
 
   const handleViewLikes = () => setViewLikes(!viewLikes);
   const handleViewPost = () => setViewPost(!viewPost);
@@ -55,20 +56,20 @@ const PostLists = ({ items }) => {
     }
   );
 
-  // Add comment to the post
-  const mutationComment = useMutation(makeComment, {
-    onSuccess: (data) => {
-      queryClient.invalidateQueries("getPost");
+  // // Add comment to the post
+  // const mutationComment = useMutation(makeComment, {
+  //   onSuccess: (data) => {
+  //     queryClient.invalidateQueries("getPost");
 
-      if (data.status === "fail") {
-        setErrorDialog(true);
-        setErrorMessage(data.message);
-      } else {
-        commentClear();
-        queryClient.refetchQueries("getPosts");
-      }
-    },
-  });
+  //     if (data.status === "fail") {
+  //       setErrorDialog(true);
+  //       setErrorMessage(data.message);
+  //     } else {
+  //       commentClear();
+  //       queryClient.refetchQueries("getPosts");
+  //     }
+  //   },
+  // });
 
   // Like the photo
   const mutationLike = useMutation(likePost, {
@@ -177,7 +178,12 @@ const PostLists = ({ items }) => {
               </Button>
             </section>
             <section className="relative">
-              <textarea
+              <InputComment
+                item={item}
+                setErrorDialog={setErrorDialog}
+                setErrorMessage={setErrorMessage}
+              />
+              {/* <textarea
                 name="comment"
                 value={comment}
                 onChange={handleCommentOnChange}
@@ -202,7 +208,7 @@ const PostLists = ({ items }) => {
                     }}
                   />
                 )
-              )}
+              )} */}
             </section>
           </Card.Footer>
         </Card>
