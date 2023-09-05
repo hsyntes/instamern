@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { useMutation, useQuery, useQueryClient } from "react-query";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faPaperPlane,
+  // faPaperPlane,
   faHeart as faHeartSolid,
 } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -17,9 +17,9 @@ import ViewLikes from "../likes/ViewLikes";
 import ErrorDialog from "../ui/ErrorDialog";
 import Creator from "./Creator";
 import getPost from "../../utils/getPost";
-import makeComment from "../../utils/makeComment";
+// import makeComment from "../../utils/makeComment";
 import likePost from "../../utils/likePost";
-import useInput from "../../hooks/useInput";
+// import useInput from "../../hooks/useInput";
 import Spinner from "../ui/Spinner";
 import Toast from "../ui/Toast";
 import InputComment from "../comments/InputComment";
