@@ -26,7 +26,7 @@ const ViewStory = ({ show, selectedStories, handleViewStory }) => {
     <>
       <Modal
         show={show}
-        className="relative overflow-hidden ps-0 pe-0 pt-0 pb-0"
+        className="relative overflow-hidden lg:ps-0 lg:pe-0 lg:pt-0 lg:pb-0"
       >
         <div className="flex items-center my-2">
           {selectedStories &&
