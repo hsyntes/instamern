@@ -1,12 +1,19 @@
 import { useState } from "react";
 import Sharer from "./Sharer";
 import ViewStory from "./ViewStory";
+import { useQueryClient } from "react-query";
 
 const StoryLists = ({ items }) => {
   const [selectedStories, setSelectedStories] = useState(null);
   const [viewStory, setViewStory] = useState(false);
+  const queryClient = useQueryClient();
 
-  const handleViewStory = () => setViewStory(!viewStory);
+  const handleViewStory = () => {
+    setViewStory(!viewStory);
+
+    queryClient.refetchQueries("getStories");
+    queryClient.refetchQueries("getStories");
+  };
 
   return (
     <>
