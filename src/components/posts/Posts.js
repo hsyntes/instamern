@@ -2,10 +2,7 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useMutation, useQuery, useQueryClient } from "react-query";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  // faPaperPlane,
-  faHeart as faHeartSolid,
-} from "@fortawesome/free-solid-svg-icons";
+import { faHeart as faHeartSolid } from "@fortawesome/free-solid-svg-icons";
 import {
   faComment,
   faHeart as faHeartRegular,
@@ -17,9 +14,7 @@ import ViewLikes from "../likes/ViewLikes";
 import ErrorDialog from "../ui/ErrorDialog";
 import Creator from "./Creator";
 import getPost from "../../utils/getPost";
-// import makeComment from "../../utils/makeComment";
 import likePost from "../../utils/likePost";
-// import useInput from "../../hooks/useInput";
 import Spinner from "../ui/Spinner";
 import Toast from "../ui/Toast";
 import InputComment from "../comments/InputComment";
@@ -37,12 +32,6 @@ const PostLists = ({ items }) => {
 
   const { currentUser } = userState;
 
-  // const {
-  //   state: { value: comment },
-  //   handleOnChange: handleCommentOnChange,
-  //   handleClear: commentClear,
-  // } = useInput();
-
   const handleViewLikes = () => setViewLikes(!viewLikes);
   const handleViewPost = () => setViewPost(!viewPost);
   const handleErrorDialog = () => setErrorDialog(!errorDialog);
@@ -55,21 +44,6 @@ const PostLists = ({ items }) => {
       refetchOnWindowFocus: false,
     }
   );
-
-  // // Add comment to the post
-  // const mutationComment = useMutation(makeComment, {
-  //   onSuccess: (data) => {
-  //     queryClient.invalidateQueries("getPost");
-
-  //     if (data.status === "fail") {
-  //       setErrorDialog(true);
-  //       setErrorMessage(data.message);
-  //     } else {
-  //       commentClear();
-  //       queryClient.refetchQueries("getPosts");
-  //     }
-  //   },
-  // });
 
   // Like the photo
   const mutationLike = useMutation(likePost, {
@@ -183,32 +157,6 @@ const PostLists = ({ items }) => {
                 setErrorDialog={setErrorDialog}
                 setErrorMessage={setErrorMessage}
               />
-              {/* <textarea
-                name="comment"
-                value={comment}
-                onChange={handleCommentOnChange}
-                className="form-input block w-full bg-white dark:bg-black border-0 border-b-2 ps-0 focus:ring-0 focus:border-b-secondary transition "
-                placeholder="Add a comment"
-                style={{ height: "auto", resize: "none" }}
-                rows={1}
-              />
-              {mutationComment.isLoading ? (
-                <Spinner
-                  size="sm"
-                  className="absolute right-10 lg:right-0 bottom-3 cursor-pointer"
-                />
-              ) : (
-                comment && (
-                  <FontAwesomeIcon
-                    icon={faPaperPlane}
-                    size="lg"
-                    className="absolute right-10 lg:right-0 bottom-3 cursor-pointer"
-                    onClick={() => {
-                      mutationComment.mutate({ postId: item?._id, comment });
-                    }}
-                  />
-                )
-              )} */}
             </section>
           </Card.Footer>
         </Card>
