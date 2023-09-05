@@ -6,9 +6,7 @@ const StoryLists = ({ items }) => {
   const [selectedStories, setSelectedStories] = useState(null);
   const [viewStory, setViewStory] = useState(false);
 
-  const handleViewStory = () => {
-    setViewStory(!viewStory);
-  };
+  const handleViewStory = () => setViewStory(!viewStory);
 
   return (
     <>
