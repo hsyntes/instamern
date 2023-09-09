@@ -36,7 +36,7 @@ const ViewStory = ({ show, selectedStories, handleViewStory }) => {
                 className={
                   currentStory === index
                     ? "w-full mx-1 bg-primary"
-                    : "w-full bg-white mx-1"
+                    : "w-full bg-dark dark:bg-white mx-1"
                 }
                 style={{ height: "2px" }}
               ></div>
