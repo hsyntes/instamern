@@ -44,14 +44,14 @@ const ViewStory = ({ show, selectedStories, handleViewStory }) => {
         </div>
         <FontAwesomeIcon
           icon={faTimes}
-          className="absolute top-8 right-4 cursor-pointer hover:text-primary"
+          className="absolute top-8 right-4 cursor-pointer text-white hover:text-primary"
           size="2x"
           style={{ zIndex: 1 }}
           onClick={handleViewStory}
         />
         <div className="relative flex items-center overflow-hidden">
           <FontAwesomeIcon
-            className="absolute top-1/2 left-4 cursor-pointer hover:text-primary drop-shadow-lg transition"
+            className="absolute top-1/2 left-4 cursor-pointer text-white hover:text-primary drop-shadow-lg transition"
             icon={faAngleLeft}
             size="3x"
             onClick={handlePrevStory}
@@ -65,7 +65,7 @@ const ViewStory = ({ show, selectedStories, handleViewStory }) => {
             />
           )}
           <FontAwesomeIcon
-            className="absolute top-1/2 right-4 cursor-pointer hover:text-primary drop-shadow-lg transition"
+            className="absolute top-1/2 right-4 cursor-pointer text-white hover:text-primary drop-shadow-lg transition"
             icon={faAngleRight}
             size="3x"
             onClick={handleNextStory}
