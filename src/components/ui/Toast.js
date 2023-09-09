@@ -10,7 +10,7 @@ const Toast = ({ show, message }) => {
       transition={{ ease: "easeOut", duration: 0.35 }}
       className="w-5/6 lg:w-auto bg-white border-2 border-slate-200 dark:border-0 dark:bg-dark shadow-xl rounded fixed bottom-24 lg:bottom-12 left-1/2 -translate-x-1/2 py-2 px-4"
     >
-      <p>{message}</p>
+      <p className="text-center">{message}</p>
     </motion.div>,
     document.getElementById("toast-root")
   );
