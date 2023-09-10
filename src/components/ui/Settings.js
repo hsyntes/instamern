@@ -6,7 +6,7 @@ import Button from "./Button";
 import Spinner from "./Spinner";
 
 const Settings = ({ show, handleSettings, handleLogout, isLoading }) => (
-  <Modal show={show} className="w-3/4 lg:w-1/4">
+  <Modal show={show} handleModal={handleSettings} className="w-3/4 lg:w-1/4">
     {isLoading ? (
       <center>
         <Spinner className="my-4" />
@@ -32,7 +32,7 @@ const Settings = ({ show, handleSettings, handleLogout, isLoading }) => (
                 Change Password
               </Link>
             </li>
-            <li className="my-4">
+            <li className="my-2">
               <Link
                 to="/change-email"
                 className="block w-full rounded hover:bg-light dark:hover:bg-black p-2 transition"
