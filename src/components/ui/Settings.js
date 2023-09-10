@@ -13,7 +13,7 @@ const Settings = ({ show, handleSettings, handleLogout, isLoading }) => (
       </center>
     ) : (
       <>
-        <Modal.Header className="mb-12">
+        <Modal.Header className="mb-6">
           <h6 className="text-lg font-semibold mx-auto">Settings</h6>
           <FontAwesomeIcon
             icon={faTimes}
@@ -32,7 +32,7 @@ const Settings = ({ show, handleSettings, handleLogout, isLoading }) => (
                 Change Password
               </Link>
             </li>
-            <li className="my-2">
+            <li className="my-1">
               <Link
                 to="/change-email"
                 className="block w-full rounded hover:bg-light dark:hover:bg-black p-2 transition"
