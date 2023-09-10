@@ -151,6 +151,7 @@ const ViewPost = ({ show, postId, handleViewPost, setSelectedPost }) => {
   return (
     <Modal
       show={show}
+      handleModal={handleViewPost}
       className="lg:w-11/12 lg:h-5/6 lg:grid lg:grid-cols-12 lg:gap-8 w-screen h-screen relative overflow-x-hidden overflow-y-scroll rounded-none lg:rounded"
     >
       {content}

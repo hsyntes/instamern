@@ -46,7 +46,11 @@ const ViewFollows = ({
   type,
 }) => {
   return (
-    <Modal show={show} className="w-3/4 lg:w-1/4">
+    <Modal
+      show={show}
+      handleModal={handleViewFollows}
+      className="w-3/4 lg:w-1/4"
+    >
       <Modal.Header>
         <h6 className="text-lg font-semibold mx-auto">{type}</h6>
         <FontAwesomeIcon

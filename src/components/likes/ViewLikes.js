@@ -41,7 +41,7 @@ const ViewLikes = ({
   isPostLoading,
 }) => {
   return (
-    <Modal show={show} className="w-3/4 lg:w-1/4">
+    <Modal show={show} handleModal={handleViewLikes} className="w-3/4 lg:w-1/4">
       <Modal.Header>
         <h6 className="text-lg font-semibold mx-auto">Likes</h6>
         <FontAwesomeIcon

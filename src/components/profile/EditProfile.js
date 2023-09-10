@@ -154,7 +154,11 @@ const EditProfile = ({ show, handleEditProfile }) => {
 
   return (
     <>
-      <Modal show={show} className="w-11/12 lg:w-2/4 xl:w-1/4 py-8">
+      <Modal
+        show={show}
+        handleModal={handleEditProfile}
+        className="w-11/12 lg:w-2/4 xl:w-1/4 py-8"
+      >
         <Modal.Header>
           <h6 className="text-lg font-semibold mx-auto">Edit Profile</h6>
           <FontAwesomeIcon
