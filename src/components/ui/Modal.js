@@ -19,7 +19,7 @@ const Modal = ({ show, className, handleModal, children }) => {
   const classes = `modal bg-white dark:bg-dark rounded p-5 shadow-lg ${className}`;
 
   document.body.addEventListener("click", (e) => {
-    if (e.target === document.getElementById("modal-overlay")) handleModal();
+    if (e.target === document.getElementById("modal-backdrop")) handleModal();
   });
 
   document.body.addEventListener("keyup", (e) => {
