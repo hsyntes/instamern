@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { createPortal } from "react-dom";
 import { motion } from "framer-motion";
 
-const Modal = ({ show, className, children }) => {
+const Modal = ({ show, className, handleModal, children }) => {
   useEffect(() => {
     const body = document.querySelector("body");
 
@@ -17,6 +17,14 @@ const Modal = ({ show, className, children }) => {
   if (!show) return null;
 
   const classes = `modal bg-white dark:bg-dark rounded p-5 shadow-lg ${className}`;
+
+  document.body.addEventListener("click", (e) => {
+    if (e.target === document.getElementById("modal-overlay")) handleModal();
+  });
+
+  document.body.addEventListener("keyup", (e) => {
+    if (e.key === "Escape") handleModal();
+  });
 
   return createPortal(
     <div id="modal-backdrop" style={{ overflow: "hidden" }}>

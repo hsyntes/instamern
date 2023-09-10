@@ -87,6 +87,7 @@ const UploadStory = ({ show, handleUploadStory }) => {
     <>
       <Modal
         show={show}
+        handleModal={handleUploadStory}
         className="flex items-center justify-center w-screen rounded-none lg:w-1/4 lg:rounded h-screen lg:h-5/6 relative overflow-hidden ps-0 pe-0 pt-0 pb-0"
       >
         <input
