@@ -93,7 +93,7 @@ const UploadPage = () => {
   return (
     <>
       <Container
-        className="flex flex-col lg:flex-row lg:grid lg:grid-cols-12 rounded border relative dark:border-gray-400"
+        className="flex flex-col lg:flex-row lg:grid lg:grid-cols-12 rounded border relative dark:border-gray-600"
         style={{ height: "70vh" }}
       >
         {mutationUpload.isLoading ? (
