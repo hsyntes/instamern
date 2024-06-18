@@ -140,7 +140,7 @@ const UploadStory = ({ show, handleUploadStory }) => {
           <Button
             type="button"
             variant="primary"
-            className="absolute flex items-center bottom-4 right-4"
+            className="absolute flex items-center bottom-8 right-8"
             onClick={handleUpload}
             disabled={!selectedPhoto || mutationUpload.isLoading}
           >
